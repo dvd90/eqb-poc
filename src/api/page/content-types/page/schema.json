@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pages",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "live_offers",
+        "wishlist",
+        "my_portfolio",
+        "essentials"
+      ]
+    },
+    "elements": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::element.element",
+      "mappedBy": "page"
+    }
+  }
+}
